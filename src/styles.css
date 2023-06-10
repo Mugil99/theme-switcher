@@ -1,0 +1,12 @@
+
+  .bright {
+    color: black;
+    background-color: white;
+    height: 100vh;
+  }
+  
+  .dark {
+    color: white;
+    background-color: black;
+    height: 100vh;
+  }

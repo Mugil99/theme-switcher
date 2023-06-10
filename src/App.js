@@ -1,23 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import './styles.css';
 
 function App() {
+  const[bright,setBright]=useState(true);
+  const handleBright=()=>{
+    setBright(true);
+    console.log(bright)
+  }
+  const handleDark=()=>{
+    setBright(false);
+    console.log(bright)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={bright?"bright":"dark"}>
+      <button onClick={handleBright}>🔆</button>
+      <button onClick={handleDark}>🌙</button>
+      <h1>Hello EVeryone!!!!</h1>
     </div>
   );
 }
